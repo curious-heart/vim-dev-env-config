@@ -1,4 +1,5 @@
 #FileName	#Address	#Method	#Comments
+plug.vim	github/junegunn	S	Plug-in manager.
 vimrc	~/.vim/	DIFF	User vimrc file.
 my_gutentags_cfg.vim	~/.vim/after/plugin/	ADD	Configuration for plug-in vim-gutentags.
 YouCompleteMe	github/ycm-core	S	Code completetion engine fro Vim.
