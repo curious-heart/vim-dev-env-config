@@ -22,6 +22,9 @@ highlight! link SignColumn Normal
 
 set ignorecase
 set shiftwidth=4
+set expandtab
+set tabstop=4
+set softtabstop=4
 " Use the internal diff if available.
 " Otherwise use the special 'diffexpr' for Windows.
 if &diffopt !~# 'internal'
@@ -60,3 +63,8 @@ function MyDiff()
   endif
 endfunction
 
+
+command! -nargs=+ BufGrep
+      \ cexpr []
+      \ | execute 'bufdo vimgrepadd /' . escape(<q-args>, '/\') . '/ %'
+      \ | copen
